@@ -13,15 +13,43 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_FKmwCB": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "shop"
+          }
+        },
+        "link_list_BUpxD6": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "shop"
+          }
+        },
+        "link_list_QVYpnB": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "shop"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_FKmwCB",
+        "link_list_BUpxD6",
+        "link_list_QVYpnB"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-f740644f-df85-43b1-8d0a-5592658aaef3",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
-        "enable_country_selector": true,
+        "enable_country_selector": false,
         "enable_language_selector": true,
-        "payment_enable": true,
+        "payment_enable": false,
         "show_policy": true,
         "margin_top": 0,
         "padding_top": 36,
