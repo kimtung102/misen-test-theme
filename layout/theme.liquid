@@ -119,7 +119,7 @@
       {% endfor %}
 
       {{ scheme_classes | prepend: 'body' }} {
-        color: rgba(var(--color-foreground), 0.75);
+        color: rgba(var(--color-foreground));
         background-color: rgb(var(--color-background));
       }
 
@@ -279,6 +279,7 @@
       }
     {% endstyle %}
 
+    {{ 'cw-main.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 

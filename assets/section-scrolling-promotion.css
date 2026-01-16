@@ -1,0 +1,105 @@
+/* Section: Scrolling Promotion */
+
+scrolling-promotion {
+  display: block;
+}
+
+.scrolling-promotion {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.scrolling-promotion__track {
+  display: flex;
+  width: fit-content;
+  animation: scrolling-promotion-scroll var(--scrolling-speed, 20s) linear infinite;
+}
+
+.scrolling-promotion:hover .scrolling-promotion__track {
+  animation-play-state: paused;
+}
+
+.scrolling-promotion__item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+  padding-right: 3.6rem;
+  white-space: nowrap;
+}
+
+.scrolling-promotion__text {
+  font-size: var(--scrolling-font-size, 1.6rem);
+  font-weight: var(--scrolling-font-weight, 600);
+  letter-spacing: var(--scrolling-letter-spacing, 0.06rem);
+  text-transform: var(--scrolling-text-transform, uppercase);
+  margin: 0;
+  line-height: 3.2rem;
+}
+
+.scrolling-promotion__separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.scrolling-promotion__separator svg {
+  width: 1em;
+  height: 1em;
+}
+
+.scrolling-promotion__separator--start {
+  font-size: var(--scrolling-start-separator-size, 1.6rem);
+}
+
+.scrolling-promotion__separator--end {
+  font-size: var(--scrolling-end-separator-size, 1.2rem);
+}
+
+/* Direction variants */
+.scrolling-promotion--reverse .scrolling-promotion__track {
+  animation-direction: reverse;
+}
+
+/* Animation keyframe */
+@keyframes scrolling-promotion-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Content alignment */
+.scrolling-promotion__content {
+  display: flex;
+  align-items: center;
+  gap: var(--scrolling-item-gap, 3rem);
+}
+
+/* Rich text content support */
+.scrolling-promotion__text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.scrolling-promotion__text a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media screen and (max-width: 749px) {
+  .scrolling-promotion__text {
+    font-size: calc(var(--scrolling-font-size, 1.6rem) * 0.85);
+  }
+  
+  .scrolling-promotion__item {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

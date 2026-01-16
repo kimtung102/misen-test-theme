@@ -27,6 +27,21 @@
       },
       {
         "type": "image_picker",
+        "id": "logo2",
+        "label": "t:settings_schema.logo.settings.logo_image.label"
+      },
+      {
+        "type": "range",
+        "id": "logo_width2",
+        "min": 50,
+        "max": 300,
+        "step": 10,
+        "default": 100,
+        "unit": "px",
+        "label": "t:settings_schema.logo.settings.logo_width.label"
+      },
+      {
+        "type": "image_picker",
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",
         "info": "t:settings_schema.logo.settings.favicon.info"
@@ -153,9 +168,9 @@
         "type": "range",
         "id": "page_width",
         "min": 1000,
-        "max": 1600,
-        "step": 100,
-        "default": 1200,
+        "max": 1800,
+        "step": 10,
+        "default": 1760,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"
       },
