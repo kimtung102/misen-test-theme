@@ -194,10 +194,10 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
-      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset relative">
         {%- if settings.logo != blank or settings.logo2 != blank -%}
           {% if settings.logo != blank %}
-            <div class="header__heading-logo-wrapper primary-logo">
+            <div class="header__heading-logo-wrapper secondary-logo">
               {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
               {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
               {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
@@ -217,7 +217,7 @@
             </div>
           {% endif %}
           {% if settings.logo2 != blank %}
-            <div class="header__heading-logo-wrapper secondary-logo">
+            <div class="header__heading-logo-wrapper primary-logo">
               {%- assign logo_alt2 = settings.logo2.alt | default: shop.name | escape -%}
               {%- assign logo_height2 = settings.logo_width2 | divided_by: settings.logo2.aspect_ratio -%}
               {% capture sizes2 %}(min-width: 750px) {{ settings.logo_width2 }}px, 50vw{% endcapture %}
@@ -308,11 +308,7 @@
       {%- endfor -%}
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {% if cart == empty %}
-          <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
-        {% else %}
-          <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
-        {% endif %}
+        <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
@@ -488,6 +484,27 @@
   </script>
 {%- endif -%}
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.section-header .header');
+    if (!header) return;
+    
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    }
+    
+    // Check initial scroll position on page load
+    handleScroll();
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll, { passive: true });
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.header.name",
@@ -655,7 +672,7 @@
       "id": "padding_top",
       "min": 0,
       "max": 36,
-      "step": 4,
+      "step": 2,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
       "default": 20
@@ -665,7 +682,7 @@
       "id": "padding_bottom",
       "min": 0,
       "max": 36,
-      "step": 4,
+      "step": 2,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20

@@ -20,7 +20,7 @@
         "id": "logo_width",
         "min": 50,
         "max": 300,
-        "step": 10,
+        "step": 5,
         "default": 100,
         "unit": "px",
         "label": "t:settings_schema.logo.settings.logo_width.label"
@@ -34,8 +34,8 @@
         "type": "range",
         "id": "logo_width2",
         "min": 50,
-        "max": 300,
-        "step": 10,
+        "max": 370,
+        "step": 5,
         "default": 100,
         "unit": "px",
         "label": "t:settings_schema.logo.settings.logo_width.label"
