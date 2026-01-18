@@ -16,6 +16,12 @@
           "type": "title",
           "settings": {}
         },
+        "product_tags_NqAdzM": {
+          "type": "product_tags",
+          "settings": {
+            "background_color": "#e9dbc0"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -49,15 +55,17 @@
             "icon_1": "truck",
             "heading_1": "FREE US Shipping +$50",
             "icon_2": "return",
+            "image_2": "shopify://shop_images/icon-vegan.avif",
             "heading_2": "Vegan & Cruelty Free",
             "icon_3": "truck",
+            "image_3": "shopify://shop_images/icon-bottle.avif",
             "heading_3": "FREE Samples"
           }
         },
         "collapsible_tab_DagKT9": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Why You'll Love It",
+            "heading": "Why You will Love It",
             "icon": "none",
             "content": "<ul><li>Strengthens roots and strands to help prevent breakage</li><li>Stimulates scalp circulation for healthier hair</li><li>Weightless hair and scalp hydration<br/></li></ul><p>A multi-benefit pre-wash hair oil treatment that strengthens your roots, hydrates your scalp and strands and promotes healthier hair. Infused with Ashwagandha and Amla, this lightweight oil is formulated for all hair types. Best used with a relaxing head massage for the perfect oil and om.</p>",
             "page": ""
@@ -66,16 +74,16 @@
         "collapsible_tab_kA6ara": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Why You'll Love It",
+            "heading": "How To Use",
             "icon": "none",
-            "content": "<ul><li>Strengthens roots and strands to help prevent breakage</li><li>Stimulates scalp circulation for healthier hair</li><li>Weightless hair and scalp hydration<br/></li></ul><p>A multi-benefit pre-wash hair oil treatment that strengthens your roots, hydrates your scalp and strands and promotes healthier hair. Infused with Ashwagandha and Amla, this lightweight oil is formulated for all hair types. Best used with a relaxing head massage for the perfect oil and om.</p>",
+            "content": "<ul><li>Section dry hair. Take one dropper of oil into the palms of your hands. Massage into your roots in circular motions, section by section. Inhale deeply and enjoy the grounding aroma.</li><li>Leave on for a minimum of five minutes, or overnight for the best results.</li><li>Rinse thoroughly before cleansing with shampoo.<br/></li></ul>",
             "page": ""
           }
         },
         "collapsible_tab_rQwN4x": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Why You'll Love It",
+            "heading": "Key Ingredients",
             "icon": "none",
             "content": "<ul><li>Strengthens roots and strands to help prevent breakage</li><li>Stimulates scalp circulation for healthier hair</li><li>Weightless hair and scalp hydration<br/></li></ul><p>A multi-benefit pre-wash hair oil treatment that strengthens your roots, hydrates your scalp and strands and promotes healthier hair. Infused with Ashwagandha and Amla, this lightweight oil is formulated for all hair types. Best used with a relaxing head massage for the perfect oil and om.</p>",
             "page": ""
@@ -84,7 +92,7 @@
         "collapsible_tab_BFdrtM": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Why You'll Love It",
+            "heading": "Full Ingredients List",
             "icon": "none",
             "content": "<ul><li>Strengthens roots and strands to help prevent breakage</li><li>Stimulates scalp circulation for healthier hair</li><li>Weightless hair and scalp hydration<br/></li></ul><p>A multi-benefit pre-wash hair oil treatment that strengthens your roots, hydrates your scalp and strands and promotes healthier hair. Infused with Ashwagandha and Amla, this lightweight oil is formulated for all hair types. Best used with a relaxing head massage for the perfect oil and om.</p>",
             "page": ""
@@ -93,6 +101,7 @@
       },
       "block_order": [
         "title",
+        "product_tags_NqAdzM",
         "description",
         "price",
         "variant_picker",
