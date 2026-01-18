@@ -10,6 +10,13 @@
   flex: 1;
 }
 
+.accordion .summary__title .accordion__title {
+  font-family: 'SofiaPro', helvetica, arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
 .accordion .summary__title + .icon-caret {
   height: calc(var(--font-heading-scale) * 0.6rem);
 }

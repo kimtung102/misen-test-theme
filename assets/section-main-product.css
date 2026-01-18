@@ -191,6 +191,8 @@ product-info {
 
 .product-form__submit {
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .product-form__submit[aria-disabled='true'] + .shopify-payment-button .shopify-payment-button__button[disabled],
@@ -216,10 +218,28 @@ product-info {
 }
 
 /* Product info */
-
-.product__info-container > * + * {
-  margin: 1.5rem 0;
+.product__info-container {
+  display: grid;
+  grid-template-columns: 142px 1fr;
+  column-gap: .5rem;
+  row-gap: 1.5rem;
 }
+
+.product__info-container > * {
+  grid-column: 1 / 3;
+}
+ 
+.product__info-container .product-form__quantity {
+  grid-column: 1 / 2;
+}
+
+.product__info-container div:has(.product-form) {
+  grid-column: 2 / 3;
+}
+
+/* .product__info-container > * + * {
+  margin: 1.5rem 0;
+} */
 
 .product__info-container iframe {
   max-width: 100%;
@@ -228,7 +248,7 @@ product-info {
 .product__info-container .product-form,
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
-  margin: 2.5rem 0;
+  margin: 0;
 }
 
 .product__text {
@@ -1220,14 +1240,14 @@ a.product__text {
 
 /* Icon with text */
 .icon-with-text {
-  --icon-size: calc(var(--font-heading-scale) * 3rem);
+  --icon-size: calc(var(--font-heading-scale) * 3.2rem);
   --icon-spacing: calc(var(--font-heading-scale) * 1rem);
 }
 
 .icon-with-text--horizontal {
   display: flex;
   justify-content: center;
-  column-gap: 3rem;
+  column-gap: 1.6rem;
   flex-direction: row;
 }
 
@@ -1264,11 +1284,11 @@ a.product__text {
 
 .icon-with-text--horizontal .h4 {
   padding-top: calc(var(--icon-size) + var(--icon-spacing));
-  text-align: center;
+  text-align: left;
+  padding-top: .33em;
 }
 
 .icon-with-text--horizontal .svg-wrapper + .h4,
-.icon-with-text--horizontal img + .h4,
 .icon-with-text--horizontal.icon-with-text--text-only .h4 {
   padding-top: 0;
 }
@@ -1276,10 +1296,16 @@ a.product__text {
 .icon-with-text__item {
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+.icon-with-text__item .inline-richtext {
+  font-family: SofiaPro, helvetica, arial, sans-serif;
+  flex: 1;
+  font-weight: 600;
 }
 
 .icon-with-text--horizontal .icon-with-text__item {
-  flex-direction: column;
   width: 33%;
 }
 

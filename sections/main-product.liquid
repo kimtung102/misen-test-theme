@@ -84,6 +84,7 @@
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
+          {%- assign first_collapsible_shown = false -%}
 
           {%- for block in section.blocks -%}
             {%- case block.type -%}
@@ -139,6 +140,12 @@
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                     {{ form | payment_terms }}
                   {%- endform -%}
+                </div>  
+              {%- when 'product_tags' -%}
+                <div class="flex flex-wrap gap-2 items-center">
+                  {% for tag in product.tags reversed %}
+                    <p style="background-color: {{ block.settings.background_color }};" class="px-[8px] py-[4px] rounded-full">{{ tag }}</p>
+                  {% endfor %}
                 </div>
               {%- when 'inventory' -%}
                 <p
@@ -211,7 +218,7 @@
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                  <details id="Details-{{ block.id }}-{{ section.id }}">
+                  <details id="Details-{{ block.id }}-{{ section.id }}"{% unless first_collapsible_shown %} open{% endunless %}>
                     <summary>
                       <div class="summary__title">
                         {% render 'icon-accordion', icon: block.settings.icon %}
@@ -227,6 +234,7 @@
                     </div>
                   </details>
                 </div>
+                {%- assign first_collapsible_shown = true -%}
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
@@ -246,7 +254,7 @@
                       {{- 'products.product.quantity.label' | t -}}
                     {%- endif -%}
                   </span>
-                  <label
+                  {% comment %} <label
                     class="quantity__label form__label"
                     for="Quantity-{{ section.id }}"
                     aria-labelledby="quantity-label-{{ section.id }}"
@@ -260,7 +268,7 @@
                         )</span
                       >
                     </span>
-                  </label>
+                  </label> {% endcomment %}
                   <div class="price-per-item__container">
                     <quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
                       <button class="quantity__button" name="minus" type="button">
@@ -746,6 +754,19 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "product_tags",
+      "name": "Product Tags",
+      "limit": 1,
+      "settings": [
+        {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#e9dbc0"
+        }
+      ]
     },
     {
       "type": "text",
