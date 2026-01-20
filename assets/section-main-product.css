@@ -222,7 +222,7 @@ product-info {
   display: grid;
   grid-template-columns: 142px 1fr;
   column-gap: .5rem;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
 }
 
 .product__info-container > * {
@@ -246,9 +246,12 @@ product-info {
 }
 
 .product__info-container .product-form,
-.product__info-container .product__description,
-.product__info-container .icon-with-text {
+.product__info-container .product__description {
   margin: 0;
+}
+
+.product__info-container .icon-with-text {
+  margin-top: 20px;
 }
 
 .product__text {

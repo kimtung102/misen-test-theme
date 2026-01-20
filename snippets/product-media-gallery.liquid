@@ -94,7 +94,7 @@
           %}
             {% continue %}
           {% endif %}
-  
+
           {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
             <li
               id="Slide-{{ section.id }}-{{ media.id }}"
@@ -208,7 +208,7 @@
             (min-width: 750px) calc((100vw - 15rem) / 8),
             calc((100vw - 8rem) / 3)
           {%- endcapture -%}
-  
+
           {%- if featured_media != null -%}
             {%- liquid
               capture media_index
@@ -332,3 +332,16 @@
     {%- endif -%}
   </div>
 </media-gallery>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const mediaGallery = document.querySelector('#MediaGallery-{{ section.id }} .product__media img');
+    const thumbnailsWrapper = document.querySelector(
+      '#MediaGallery-{{ section.id }} .thumbnail-slider .thumbnail-list'
+    );
+    if (mediaGallery && thumbnailsWrapper) {
+      const thumbnailHeight = mediaGallery.clientHeight - 88;
+      thumbnailsWrapper.style.maxHeight = thumbnailHeight + 'px';
+    }
+  });
+</script>

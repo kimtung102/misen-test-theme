@@ -16,6 +16,12 @@
           "type": "title",
           "settings": {}
         },
+        "okendo_star_rating_VM8JYw": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "product_tags_NqAdzM": {
           "type": "product_tags",
           "settings": {
@@ -101,6 +107,7 @@
       },
       "block_order": [
         "title",
+        "okendo_star_rating_VM8JYw",
         "product_tags_NqAdzM",
         "description",
         "price",
@@ -117,8 +124,8 @@
         "enable_sticky_info": true,
         "color_scheme": "scheme-f740644f-df85-43b1-8d0a-5592658aaef3",
         "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "cover",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
@@ -146,6 +153,23 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "176892782772d13d6e": {
+      "type": "apps",
+      "blocks": {
+        "reelup_shoppable_videos_reels_reelup_playlist_WQEh4G": {
+          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup_playlist/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {
+            "playlist_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "reelup_shoppable_videos_reels_reelup_playlist_WQEh4G"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "collapsible_content_6pQnjn": {
@@ -247,6 +271,25 @@
         "padding_bottom": 0
       }
     },
+    "176892403248c806ce": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_VjHFfa": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_VjHFfa"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "scrolling_promotion_4HrzyJ": {
       "type": "scrolling-promotion",
       "blocks": {
@@ -278,13 +321,26 @@
         "padding_top": 36,
         "padding_bottom": 32
       }
+    },
+    "custom_liquid_CAeiQh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% style %}\ndiv.okeReviews.oke-w {\n  max-width: 100%!important;\n}\n.shopify-section:has(div.okeReviews.oke-w) {\nbackground-color: #fff5ec;\npadding: 48px 0;\n}\n\n.shopify-section:has(.reelUp_playlist_slider_static) {\n background-color: #e7ceb5;\npadding-top: 30px;\npadding-bottom: 20px;\n}\n.reelUp_slider_heading {\nfont-size: 56px!important;\nfont-family: \"QuincyCF\"!important;\n}\n{% endstyle %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "related-products",
+    "176892782772d13d6e",
     "collapsible_content_6pQnjn",
     "video_rFcrc4",
-    "scrolling_promotion_4HrzyJ"
+    "176892403248c806ce",
+    "scrolling_promotion_4HrzyJ",
+    "custom_liquid_CAeiQh"
   ]
 }
