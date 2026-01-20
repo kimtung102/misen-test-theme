@@ -148,6 +148,89 @@
         "padding_bottom": 28
       }
     },
+    "collapsible_content_6pQnjn": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_kq9WjV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "01. How do I use the Hair Oil?",
+            "icon": "none",
+            "row_content": "<p>Apply desired amount of oil to parted, dry hair and massage into roots in a circular motion, creating warmth for better absorption and circulation. Leave on for at least 5 minutes or overnight for best results. Rinse well before cleansing with the HoliRoots Shampoo and Conditioner.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_a8rM7F": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "02. Can I use it as a leave-in treatment?",
+            "icon": "none",
+            "row_content": "<p>We recommend using the HoliRoots Hair Oil as a pre-wash treatment.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_arnmCN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "03. Will it leave my hair greasy?",
+            "icon": "none",
+            "row_content": "<p>HoliRoots Hair Oil was formulated to be lightweight and nourish the scalp without leaving it greasy. If you feel your hair is weighed down after using it, we recommend applying less product and massaging it for longer on the scalp, before rinsing it twice with HoliRoots Shampoo.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_fDHwzw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "04. What is the difference between all the hair oils?",
+            "icon": "none",
+            "row_content": "<p>Holiroots Hair Oil is a prewash root treatment oil for stronger, healthier hair, and has a black dropper lid. Amla Soothing Serum is a prewash lightweight pre-wash serum to soothe and hydrate sensitive, itchy scalps. Smooth & Shine Hair Oil is a post-wash hair elixir to smooth, tame, protect and shine and has a white dropper lid.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_etpK63": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "05. Can I use it on my hair lengths?",
+            "icon": "none",
+            "row_content": "<p>For best results, we recommend using the HoliRoots Hair Oil only on the scalp.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ReHr4p": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "06. Why does my product smell, look, or feel different than last time?",
+            "icon": "none",
+            "row_content": "<p>At Fable & Mane, we pride ourselves on using only the highest quality ingredients in our products. As a result, each batch may vary slightly in color, scent, and texture, without compromising on efficacy. While we strive for consistency and quality in every product we make, we also believe that the natural variations in our formulations make each one truly special and unique. We also recognize that scent is a highly personal experience, and that everyone’s sense of smell is unique. Therefore, we cannot guarantee that every customer will experience the same scent or note from our products.<br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_kq9WjV",
+        "collapsible_row_a8rM7F",
+        "collapsible_row_arnmCN",
+        "collapsible_row_fDHwzw",
+        "collapsible_row_etpK63",
+        "collapsible_row_ReHr4p"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-f740644f-df85-43b1-8d0a-5592658aaef3",
+        "color_scheme": "scheme-f740644f-df85-43b1-8d0a-5592658aaef3",
+        "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/faq-image.webp",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "video_rFcrc4": {
       "type": "video",
       "name": "t:sections.video.presets.name",
@@ -200,6 +283,7 @@
   "order": [
     "main",
     "related-products",
+    "collapsible_content_6pQnjn",
     "video_rFcrc4",
     "scrolling_promotion_4HrzyJ"
   ]
